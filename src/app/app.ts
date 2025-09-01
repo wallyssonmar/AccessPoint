@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+import { TelaLogin } from './components/tela-login/tela-login';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ TelaLogin],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
