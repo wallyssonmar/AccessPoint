@@ -19,13 +19,14 @@ export const MyPreset = definePreset(Aura, {
         colorScheme: {
             light: {
                 primary: {
-                    color: '{blue.500}',
+                    color: '{blue.100}',
                     contrastColor: '#ffffff',
                     hoverColor: '{blue.600}',
                     activeColor: '{blue.700}'
                 },
+                
                 surface: {
-                  0: '#ff0000ff', // Para mudar a cor de fundo padrão altere aqui
+                  0: '#f8fafc', // Para mudar a cor de fundo padrão altere aqui
                   50: '#f8fafc',
                   100: '#f1f5f9',
                   200: '#e2e8f0'

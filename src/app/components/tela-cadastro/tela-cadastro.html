@@ -1,1 +1,72 @@
-<p>tela-cadastro works!</p>
+<div
+  class="flex align-items-center justify-content-center h-screen flex-column"
+>
+  <form
+    [formGroup]="cadastroForm"
+    (ngSubmit)="onSubmit()"
+    autocomplete="off"
+    class="flex align-items-center justify-content-center flex-column p-fluid w-30rem h-35rem p-5 bg-gray-300 border-round"
+  >
+    <div class="flex align-items-center justify-content-center flex-column pb-4" >
+      <h1 class="m-0">Bem vindo de volta</h1>
+      <p class="m-0">entre com suas credenciais para acessar a conta</p>
+    </div>
+    <div class="field flex flex-column gap-1">
+      <label for="email">Email</label>
+      <input
+        class="w-22rem"
+        id="email"
+        pInputText
+        type="email"
+        formControlName="email"
+        autocomplete="new-email"
+        placeholder="Digite seu email"
+      />
+    </div>
+
+    <div class="field flex flex-column gap-1">
+      <label for="senha">Senha</label>
+      <input
+        class="w-22rem"
+        id="senha"
+        pInputText
+        type="password"
+        formControlName="senha"
+        autocomplete="new-password"
+        placeholder="Digite sua senha"
+      />
+    </div>
+
+    <div class="field flex flex-column gap-1">
+      <label for="senha">Confirme sua senha</label>
+      <input
+        class="w-22rem"
+        id="senha"
+        pInputText
+        type="password"
+        formControlName="confirmSenha"
+        autocomplete="new-password"
+        placeholder="Digite sua senha"
+      />
+    </div>
+    <div *ngIf="
+    cadastroForm.get('confirmPassword')?.errors?.['mismatch'] &&
+    cadastroForm.get('confirmPassword')?.touched
+  ">
+    As senhas não coincidem!
+  </div>
+    <div class="mb-3">
+        <a class="no-underline p-2 hover:underline" routerLink="cadastro">Esqueceu a senha?</a>
+    </div>
+
+    <button
+      pButton
+      class="w-7rem bg-gray-500"
+      type="submit"
+      label="Entrar"
+      
+    ></button>
+  </form>
+  <p>Não tem uma conta? <a class="no-underline hover:underline" routerLink="cadastro">Criar conta</a></p>
+</div>
+

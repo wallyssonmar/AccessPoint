@@ -4,6 +4,11 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 
+import { TelaCadastro } from '../tela-cadastro/tela-cadastro';
+import { RouterLink } from '@angular/router';
+
+
+
 @Component({
   selector: 'app-tela-login',
   imports: [
@@ -11,8 +16,9 @@ import { InputTextModule } from 'primeng/inputtext';
     ButtonModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    RouterLink
+],
   templateUrl: './tela-login.html',
   styleUrl: './tela-login.css'
 })
